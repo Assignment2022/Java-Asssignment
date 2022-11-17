@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "5f5e58ac-6c71-44ca-832c-f9d8248be795",
+		"name": "ProductRestapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20407695"
+	},
+	"item": [
+		{
+			"name": "GetShipmentById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/shipments?id=109347263,123456891",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"shipments"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "109347263,123456891"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetShipmentAggregation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/aggregation?pricing=NL,CN&track=109347263,123456891&shipments=109347263,123456891",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"aggregation"
+					],
+					"query": [
+						{
+							"key": "pricing",
+							"value": "NL,CN"
+						},
+						{
+							"key": "track",
+							"value": "109347263,123456891"
+						},
+						{
+							"key": "shipments",
+							"value": "109347263,123456891"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPricingByCountryCode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/pricing?countryCode=CN,NL",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"pricing"
+					],
+					"query": [
+						{
+							"key": "countryCode",
+							"value": "CN,NL"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTrackById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/track?id=109347263,123456891",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"track"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "109347263,123456891"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
